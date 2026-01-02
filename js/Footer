@@ -1,0 +1,13 @@
+function loadFooter() {
+    const footer = document.getElementById('navfooter');
+    const navfooter = `
+    <nav>
+        <a href="https://www.pu.edu.tw/">靜宜大學</a>
+        <a href="index.html">這是首頁</a>
+    </nav>
+    `;
+    if (footer) {
+        footer.innerHTML = navfooter;
+    }
+}
+loadFooter();
