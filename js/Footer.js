@@ -1,0 +1,1 @@
+document.getElementById('footder').innerHTML = '測試測試';
