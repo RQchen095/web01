@@ -1,0 +1,11 @@
+table, th, td ,tr{
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 40px;
+}
+div {
+  background-color: lightblue;
+}
