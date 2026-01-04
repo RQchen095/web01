@@ -25,9 +25,20 @@ function fetchQuestionsByCategory(categoryId) {
     for(let j = 0; j < questions.length; j++) {
         const ques = questions[j];
         questionDiv.innerHTML += 
-          `<p>Q${j+1}: ${ques.question}<br>
-          ${ques.options}</p>`;
+          `<p>Q${j+1}: ${ques.question}<br></p>
+          `;
+          for(let k = 0; k < ques.options.length; k++) {
+            questionDiv.innerHTML += `
+            <button onclick="checkAnswer(${k}, ${ques.answer})">${ques.options[k]}</button><br>
+            `;
+          }
     }
   });
 }
-  
+function checkAnswer(selectedIndex, correctAnswer) {
+  if (selectedIndex == correctAnswer) {
+    alert("答對了！");
+  } else {
+    alert("答錯了，再試試看！");
+  }
+}
