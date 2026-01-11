@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel = "icon" href = "../image/Mutsumi.PNG">
-        <title>這是遊戲</title>
-        <link rel="stylesheet" href="../css/style.css">
-    </head>
-    <body>
-        <div id = "header"></div>
-        <a href= "./game_1.html"><button><h1>猜謎</h1></button></a>
-        <a href= "./game_2.html"><button><h1>猜拳</h1></button></a>
-        <div id = "footder"></div>
-        <script src = "../js/Header.js"></script>
-        <script src = "../js/Footer.js"></script>
-    </body>
+  <head>
+    <link rel="icon" href="../image/Mutsumi.PNG" />
+    <title>這是遊戲</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <a href="./game_1.html"
+      ><button><h1>猜謎</h1></button></a
+    >
+    <a href="./game_2.html"
+      ><button><h1>猜拳</h1></button></a
+    >
+    <footer>
+      <nav>
+        <img src="../data/image/kotone.png" width="100" height="100" />
+        <p>資管2B</p>
+        <p>陳若綺</p>
+      </nav>
+    </footer>
+    <script>
+      fetch("./header.html")
+        .then((res) => res.text())
+        .then((data) => (document.getElementById("header").innerHTML = data));
+    </script>
+  </body>
 </html>

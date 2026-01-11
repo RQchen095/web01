@@ -1,14 +1,47 @@
 <html>
-    <head>
-        <link rel = "icon" href = "../image/Mutsumi.PNG">
-        <title>這是猜拳遊戲</title>
-        <link rel="stylesheet" href="../css/style.css">
-    </head>
-    <body>
-        <div id = "header"></div>
-        <div id = "footder"></div>
-        <script src = "../js/Header.js"></script>
-        <script src = "../js/game_01.js"></script>
-        <script src = "../js/Footer.js"></script>
-    </body>
+  <head>
+    <link rel="icon" href="../image/Mutsumi.PNG" />
+    <title>這是猜拳遊戲</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <ul>
+      <li><button onclick="playGame('✌️')">✌️</button></li>
+      <li><button onclick="playGame('🖐️')">🖐️</button></li>
+      <li><button onclick="playGame('✊')">✊</button></li>
+    </ul>
+    <div id="result"></div>
+    <script>
+      function playGame(playerChoice) {
+        const emoji = ["✌️", "🖐️", "✊"];
+        const computerChoice = emoji[Math.floor(Math.random() * 3)];
+        let result = "";
+        let resultClass = "";
+
+        if (playerChoice === computerChoice) {
+          result = "平手！";
+        } else if (
+          (playerChoice === "✊" && computerChoice === "✌️") ||
+          (playerChoice === "🖐️" && computerChoice === "✊") ||
+          (playerChoice === "✌️" && computerChoice === "🖐️")
+        ) {
+          result = "你贏了！🎉";
+        } else {
+          result = "你輸了！😢";
+        }
+        document.getElementById('result').innerHTML = `
+          你出：${playerChoice}<br>
+          電腦出：${computerChoice}<br>
+          <strong>${result}</strong>
+        `;
+    }
+    </script>
+    <footer>
+      <nav>
+        <img src="../data/image/kotone.png" width="100" height="100" />
+        <p>資管2B</p>
+        <p>陳若綺</p>
+      </nav>
+    </footer>
+  </body>
 </html>
