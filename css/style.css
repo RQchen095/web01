@@ -38,3 +38,20 @@ ul {
   padding: 0;
   font-size: 40px;
 }
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px;
+}
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+h5 {
+  font-size: 40px;
+  background-color: black;
+  padding: 30px;
+}
